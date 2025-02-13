@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Proposal</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: lightblue;
+            flex-direction: column;
+            font-family: Georgia, serif;
+            text-align: center;
+        }
+        .typing {
+            font-size: 24px;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid black;
+            width: 0;
+            animation: typing 3s steps(40, end) forwards, blink 0.3s infinite;
+        }
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+        .hidden {
+            display: none;
+        }
+        .container {
+            margin-top: 20px;
+            text-align: justify;
+            max-width: 600px;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <div class="typing">Will you be my Valentine's date?</div>
+    <div class="container hidden" id="message">
+        <p>Hi ik medj late now ko lang kasi natapos to hehe kahapon ko pa ginagawa but will u be my valentine's date?? hehe i plan on watching coco with you and another movie of my choice sana hehe na ill make sure you'll like pero kumuha ako 3 movies na possible kasi baka napanood mo na the first one is the call, the occupant, and woman of the hour. all thriller movies na magugustuhan mo :> i know this is kinda short kasi medj nahihirapan ako mag concentrate kasi i feel sick untill now pero need to go to class on fri kasi may class na ulit hehe pero i really hope na we could have a small date even if its online. valentines wouldn't be complete without a date with you :> sooo will you be my valentines date? :> kahit secondary lang kasi may alis kapa non feel ko date mo si cess at ab hehe </p>
+        <div class="button-container">
+            <button onclick="window.location.href='yay.html'">Yes</button>
+            <button onclick="window.location.href='nochoice.html'">Yes</button>
+        </div>
+    </div>
+
+    <script>
+        setTimeout(() => {
+            document.querySelector('.typing').style.display = 'none';
+            document.getElementById('message').classList.remove('hidden');
+        }, 5000);
+    </script>
+</body>
+</html>
